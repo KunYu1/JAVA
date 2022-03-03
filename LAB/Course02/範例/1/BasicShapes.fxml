@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BasicShapes.fxml -->
+<!-- Defining Shape objects and styling via CSS -->
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+
+
+
+
+<Pane id="Pane" prefHeight="500.0" prefWidth="500.0" stylesheets="@BasicShapes.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+ <children>
+ 
+ <Line fx:id="line1" endX="150.0" endY="450.0" startX="350.0" startY="450.0" />
+ <Line fx:id="line2" endX="250.0" endY="300.0" startX="250.0" startY="450.0" />
+ 
+ <Rectangle fx:id="rectangle" height="90.0" layoutX="70.0" layoutY="150.0" width="90.0" />
+ 
+ <Circle fx:id="circle" centerX="400.0" centerY="200.0" radius="50.0" />
+ 
+ <Ellipse fx:id="ellipse" centerX="250.0" centerY="300.0" radiusX="100.0" radiusY="50.0" />
+ 
+ <Arc fx:id="arc" centerX="250.0" centerY="120.0" length="270.0" radiusX="45.0" radiusY="45.0" startAngle="300.0" type="ROUND" />
+ 
+ <Label fx:id="label" text="YA!" layoutX="400" layoutY="400" />
+ 
+ <Text fx:id="text" text="Q A Q"  layoutX="210" layoutY="200" />
+ 
+ 
+ 
+ </children>
+</Pane>

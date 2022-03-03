@@ -1,0 +1,6 @@
+Javac --module-path $env:PATH_TO_FX --add-modules=javafx.controls HelloFX.java 
+
+java --module-path $env:PATH_TO_FX --add-modules=javafx.controls HelloFX 
+
+Javac --module-path $env:PATH_TO_FX --add-modules=javafx.controls,javafx.fxml,javafx.media *.java
+Java --module-path $env:PATH_TO_FX --add-modules=javafx.controls,javafx.fxml,javafx.media Rummiikub

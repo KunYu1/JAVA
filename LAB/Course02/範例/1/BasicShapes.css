@@ -1,0 +1,55 @@
+Line, Rectangle, Circle, Ellipse, Arc {
+ -fx-stroke-width: 5;
+}
+#line1 {
+ -fx-stroke: red;
+ -fx-stroke-line-cap: square;
+ -fx-smooth: false;
+}
+#line2 {
+ -fx-stroke: rgba(3%, 50%, 30%, 0.5);
+ -fx-stroke-line-cap: round;
+ -fx-smooth: false;
+}
+Rectangle {
+ -fx-stroke: red;
+ -fx-arc-width: 10;
+ -fx-arc-height: 10;
+ -fx-fill: yellow;
+ -fx-stroke-type: inside;
+  -fx-smooth: true;
+}
+Circle {
+ -fx-stroke: gray;
+ -fx-fill: radial-gradient(center 50% 50%, radius 60%, white, red);
+ -fx-stroke-type: outside;
+ -fx-smooth: true;
+}
+Ellipse {
+ -fx-stroke: green;
+ -fx-fill: image-pattern("yellowflowers.png");
+ -fx-stroke-type: outside;
+ -fx-smooth: true;
+ -fx-stroke-dash-array: 
+}
+Arc {
+ -fx-stroke: purple;
+ -fx-fill: linear-gradient(to left,white, black);
+ -fx-stroke-type: outside;
+ -fx-smooth: true;
+}
+
+#label {
+ -fx-font: bold 20pt Arial;
+ -fx-text-alignment: center;
+ -fx-text-fill: blue;
+
+}
+
+#text {
+ -fx-font: bold 14pt Arial;
+ -fx-text-fill: blue;
+ -fx-text-alignment: right;
+ -fx-text-origin: bottom;
+}
+
