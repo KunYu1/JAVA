@@ -1,3 +1,5 @@
+//javac --module-path $env:PATH_TO_FX --add-modules=javafx.controls,javafx.fxml .\HW2_1.java
+//java --module-path $env:PATH_TO_FX --add-modules=javafx.controls,javafx.fxml HW2_1
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

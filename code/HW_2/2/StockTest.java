@@ -1,3 +1,5 @@
+//javac *.java
+//java StockTest
 import java.util.Scanner;
 import java.util.Vector;
 public class StockTest {

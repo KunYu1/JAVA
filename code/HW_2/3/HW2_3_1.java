@@ -1,3 +1,5 @@
+//javac --module-path $env:PATH_TO_FX --add-modules=javafx.controls *.java
+//java --module-path $env:PATH_TO_FX --add-modules=javafx.controls HW2_3_1
 import javafx.application.Application;
 import javafx.scene.control.Label;
 import javafx.scene.Scene;
