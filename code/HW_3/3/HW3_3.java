@@ -1,5 +1,5 @@
 //javac *.java
-//java Hw3_1
+//java Hw3_3
 import java.awt.Dimension;
 import java.awt.Point;
 import java.io.File;

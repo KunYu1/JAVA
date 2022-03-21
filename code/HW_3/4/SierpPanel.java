@@ -1,5 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.security.cert.PolicyNode;
+
 import javax.swing.*;
 class SierpPanel extends JPanel 
 {
@@ -12,31 +14,26 @@ class SierpPanel extends JPanel
 	public void paintComponent(Graphics g)
 	{
 	    super.paintComponent(g);
-	    Point p1 = new Point(getWidth()/2, 10);
-	    Point p2 = new Point(10, getHeight()-10);
-	    Point p3 = new Point(getWidth()-10, getHeight()-10);
-        display(g, order, p1, p2, p3);
+	    Point p = new Point(getWidth()/2, 201);
+        display(g, order, p , 200);
+        //System.out.println(getHeight()+" "+getWidth());
     }
                     
-    private void display(Graphics g, int order, Point p1, Point p2, Point p3){
-        if ( order == 0)
-		{
-           g.drawLine(p1.x, p1.y, p2.x, p2.y);
-           g.drawLine(p1.x, p1.y, p3.x, p3.y);
-           g.drawLine(p2.x, p2.y, p3.x, p3.y);
-		}
-        else 
-		{
-           Point p12 = midPoint(p1, p2);
-           Point p23 = midPoint(p2, p3);
-           Point p31 = midPoint(p3, p1);
-           display(g, order-1, p1, p12, p31);
-           display(g, order-1, p12, p2, p23);
-           display(g, order-1, p31, p23, p3);
+    private void display(Graphics g, int order, Point p, int r){
+        g.drawOval(p.x-r, p.y-r, 2*r, 2*r);
+        if(order>0){
+            Point p_top = new Point(p.x, p.y-r/2);
+            Point p_bottom = new Point(p.x, p.y+r/2);
+            Point p_left = new Point(p.x-r/2, p.y);
+            Point p_right = new Point(p.x+r/2, p.y);
+            g.setColor(Color.RED);
+            display(g, order-1, p_top, r/2);
+            g.setColor(Color.YELLOW);
+            display(g, order-1, p_bottom, r/2);
+            g.setColor(Color.GREEN);
+            display(g, order-1, p_left, r/2);
+            g.setColor(Color.BLUE);
+            display(g, order-1, p_right, r/2);
         }
-      }  
-      private Point midPoint(Point p1, Point p2)
-	  {
-       return new Point( (p1.x+p2.x)/2, (p1.y+p2.y)/2); 
-	  }
+    }
 }

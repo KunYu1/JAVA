@@ -24,7 +24,7 @@ public class MyFrame extends JFrame{
 			public void actionPerformed(ActionEvent event){
 				input = textfiled.getText();
 				input = input.toLowerCase();
-				System.out.print(input);
+				textfiled.setText(input);
 			}
 		});
 		add(button_low);

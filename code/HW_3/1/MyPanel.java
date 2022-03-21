@@ -9,11 +9,6 @@ public class MyPanel extends JPanel{
 	public MyPanel(int input[],int i) {
 		a = input;
 		n = i;
-	}
-	@Override
-	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		g.setColor(Color.BLACK);
 		JButton button  = new JButton("Sort");
 		button.addActionListener(new ActionListener(){
 			@Override
@@ -22,6 +17,11 @@ public class MyPanel extends JPanel{
 			}
 		});
 		add(button);
+	}
+	@Override
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		g.setColor(Color.BLACK);		
 		int width = getWidth();
 		int height = getHeight();
 		for(int i = 0; i<n; i++){
