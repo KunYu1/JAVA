@@ -16,7 +16,4 @@ public class Rect {
 		frame.pack();
 		frame.setVisible(true);
 	}
-
-
-
 }
