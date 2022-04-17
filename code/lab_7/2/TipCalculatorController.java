@@ -17,6 +17,7 @@ public class TipCalculatorController {
 
     private BigDecimal tipPercentage = new BigDecimal(0.15); // 15% default
 
+    private BigDecimal sum = new BigDecimal(0.0);
     // GUI controls defined in FXML and used by the controller's code
     @FXML
     private TextField amountTextField;
@@ -33,15 +34,19 @@ public class TipCalculatorController {
     @FXML
     private TextField totalTextField;
 
+    @FXML
+    private TextField totaltipTextField;
     // calculates and displays the tip and total amounts
     @FXML
     private void calculateButtonPressed(ActionEvent event) {
         try {
             BigDecimal amount = new BigDecimal(amountTextField.getText());
             BigDecimal tip = amount.multiply(tipPercentage);
+            sum = sum.add(tip);
             BigDecimal total = amount.add(tip);
             tipTextField.setText(currency.format(tip));
             totalTextField.setText(currency.format(total));
+            totaltipTextField.setText(currency.format(sum));
         }
         catch (NumberFormatException ex) {
             amountTextField.setText("Enter amount");
