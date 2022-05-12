@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<Pane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TransitionAnimationsController">
+   <children>
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="90.0" layoutX="45.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 10; -fx-arc-height: 50; -fx-arc-width: 50; -fx-fill: yellow;" width="90.0" />
+      <Button fx:id="startButton" layoutX="38.0" layoutY="161.0" mnemonicParsing="false" onAction="#startButtonPressed" text="Start Animation" />
+   </children>
+</Pane>

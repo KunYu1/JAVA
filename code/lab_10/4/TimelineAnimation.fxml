@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane id="Pane" fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimelineAnimationController">
+   <children>
+      <Circle fx:id="c2" fill="DODGERBLUE" layoutX="121.0" layoutY="240.0" onMouseDragged="#circleOnMouseDragged" onMousePressed="#circleOnMousePressed" onMouseReleased="#circleOnMouseReleased" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+      <Circle fx:id="c1" fill="DODGERBLUE" layoutX="284.0" layoutY="106.0" onMouseDragged="#circleOnMouseDragged" onMousePressed="#circleOnMousePressed" onMouseReleased="#circleOnMouseReleased" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+      <Text fx:id="text" fill="RED" layoutX="75.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
